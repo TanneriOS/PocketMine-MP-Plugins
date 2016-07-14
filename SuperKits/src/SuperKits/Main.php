@@ -14,9 +14,20 @@ class Main extends PluginBase {
     $this->getLogger()->info("SuperKits Enabled!");
     
     $this->setCommands();
+    
+    $this->setConfigs();
   }
   
   public function setCommands() {
     $this->getCommand("kit")->setExecutor(new KitCommand($this), $this);
+  }
+  
+  public function setConfigs() {
+    if(!(is_dir($this->getDataFolder() . "vip"))) {
+      @mkdir($this->getDataFolder() . "vip");
+    }
+    if(!(is_dir($this->getDataFolder() . "vip+"))) {
+      @mkdir($this->getDataFolder() . "vip+");
+    }
   }
 }
