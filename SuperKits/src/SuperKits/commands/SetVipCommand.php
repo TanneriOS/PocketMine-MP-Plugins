@@ -48,6 +48,8 @@ class SetVipCommand extends PluginBase() {
               $vip->set($player, null);
               $sender->sendMessage(TF::BLUE . $player . " has now been removed from vip list!");
             }
+            $config->save();
+            $config->reload();
           }
           break;
       }
