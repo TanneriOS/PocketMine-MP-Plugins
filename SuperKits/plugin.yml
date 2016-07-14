@@ -1,0 +1,12 @@
+name: SuperKits
+main: SuperKits\Main
+api: [2.0.0]
+version: 1.0.0
+author: TxnneriOS
+commands:
+  kit:
+    description: "SuperKits Kit Command!"
+  vip:
+    description: "SuperKits Vip Command!"
+  vip+:
+    description: "SuperKits Vip+ Command!"
