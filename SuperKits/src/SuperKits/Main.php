@@ -7,6 +7,8 @@ use pocketmine\Server;
 use pocketmine\utils\Config;
 
 use SuperKits\commands\KitCommand;
+use SuperKits\commands\SetVipCommand;
+use SuperKits\commands\SetVipPlusCommand;
 
 class Main extends PluginBase {
 
@@ -18,6 +20,8 @@ class Main extends PluginBase {
   
   public function setCommands() {
     $this->getCommand("kit")->setExecutor(new KitCommand($this), $this);
+    $this->getCommand("vip")->setExecutor(new SetVipCommand($this), $this);
+    $this->getCommand("vip+")->setExecutor(new SetVipPlusCommand($this), $this);
   }
   
   public function setConfigs() {
